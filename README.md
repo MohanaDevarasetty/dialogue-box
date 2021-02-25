@@ -1,18 +1,13 @@
 # dialogue_box
 
-## Project setup
+## Library setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles, minifies and will create package in main folder structure
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run build-lib
 ```
 
 ### Lints and fixes files
@@ -20,5 +15,29 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Install package in project
+```
+npm install <location to main folder structure>/dialogue-box-0.1.0.tgz
+```
+
+## Importing in project
+```
+<template>
+<alert-component
+        :headerTitle="header"
+        :message="body"
+        :footer="footer"
+        @close="close"
+      />
+</template>
+<script>
+import  AlertComponent  from 'dialogue-box'
+export default {
+    components: {
+        AlertComponent
+    }
+}
+</script>
+```
+
+
